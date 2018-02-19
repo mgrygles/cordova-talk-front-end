@@ -10,7 +10,9 @@ class Store extends Component {
   }
 
   componentDidMount() {
-      fetch(`http://ec2-54-173-199-105.compute-1.amazonaws.com:8080/store/phones/1/10`) 
+      let URL = 'http://ec2-54-173-199-105.compute-1.amazonaws.com:8080/store/phones/1/10'
+      console.log("getting "+URL);
+      fetch(URL) 
           .then(result=> {
               result.json().then(items=> {
               console.log(items);
